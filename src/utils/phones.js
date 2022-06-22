@@ -1,4 +1,3 @@
-import React from 'react';
 import iphone13 from '../img/iphone13.png'
 import fold3 from '../img/fold3.png'
 import xiaomi from '../img/Xiaomi.png'

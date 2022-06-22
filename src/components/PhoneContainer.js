@@ -1,11 +1,10 @@
 import React from 'react';
-import iphone from '../img/iphone13.png'
 
 const PhoneContainer = ({phone}) => {
     return (
         <div className='product'>
             <div className='product-img'>
-                <img src={phone.img} />
+                <img src={phone.img} alt='img'/>
             </div>
             <div className='product-title'>
                 <h3>{phone.name}</h3>

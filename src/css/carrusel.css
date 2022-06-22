@@ -65,12 +65,16 @@
 @media (min-width:1120px){
     
     .carrusel-container{
+        width: 45vw;
         margin-top: 0;
+        top: 75vh;
+        left: 10vw;
         position: absolute;
+        background: #fff;
     }
 
     .carrusel-phone-container{
-        width: 35vw;
+        width: 15vw;
         height: 55vh;
         padding: .5rem;
         margin: auto;
@@ -78,6 +82,16 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+    }
+
+    .row-directions{
+        width: 40vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 .5rem;
+        margin-top: 40%;
+        position: absolute;
+        z-index: 1000;
     }
 
 }

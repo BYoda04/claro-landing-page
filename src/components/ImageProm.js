@@ -5,7 +5,7 @@ const ImageProm = () => {
     return (
         <div className='img'>
             <div className='img-container'>
-                <img src={prom}></img>
+                <img src={prom} alt='img' />
             </div>
         </div>
     );

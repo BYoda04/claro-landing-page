@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <div className='logo-container'>
                 <div className='logo-img'>
-                    <img src={claro}/>
+                    <img src={claro} alt='img'/>
                 </div>
             </div>
         </header>
