@@ -1,0 +1,12 @@
+.body{
+    background: #fff;
+}
+
+@media (min-width:1120px){
+
+    .body{
+        background: #fff;
+        display: flex;
+    }
+
+}

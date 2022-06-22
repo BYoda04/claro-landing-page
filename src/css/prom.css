@@ -1,0 +1,27 @@
+.img{
+    width: 90vw;
+    padding: 1.15rem;
+}
+
+.img-container{
+    width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+@media (min-width:1120px){
+
+    .img{
+        width: 40vw;
+        height: 50vh;
+        padding: 1.15rem;
+        margin: auto;
+    }
+    
+    .img-container img{
+        width: 100%;
+    }
+
+}

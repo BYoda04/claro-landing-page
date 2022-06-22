@@ -1,0 +1,97 @@
+
+.form{
+    background: #f8f8f8;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+    margin: 1.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: start;
+}
+
+.form-text{
+    color: #dc291c;
+}
+
+.form-input label{
+    font-weight: 700;
+    font-size: .9em;
+}
+
+.form-input div{
+    text-align: center;
+    border: 1px solid #111;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: .5rem 1rem;
+}
+
+.form-input div input{
+    border: none;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.form-input div input:focus{
+    outline: none;
+    border: none;
+}
+
+.form-input div input:active{
+    outline: none;
+    border: none;
+}
+
+.form-button{
+    text-align: center;
+}
+
+.form-button button{
+    background: #dc291c;
+    border-radius: 1rem;
+    padding: .8rem;
+    color: #f8f8f8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media (min-width:1120px){
+
+    .form{
+        width: 20vw;
+        height: 45vh;
+        background: #f8f8f8;
+        box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        margin: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: start;
+    }
+
+    .form form{
+        height: auto;
+    }
+
+    .form-text h3{
+        font-size: 1.5em;
+        margin: 1rem 0;
+    }
+
+    .form-input{
+        margin: 2rem 0 1rem;
+    }
+    
+    .form-input div{
+        text-align: center;
+        border: 1px solid #111;
+        border-radius: 1rem;
+        padding: .5rem;
+        margin: .5rem 0;
+    }
+
+    .form-button{
+        margin: 2rem 0 1rem;
+    }
+
+}
