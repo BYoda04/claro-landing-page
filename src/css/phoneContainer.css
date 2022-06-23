@@ -56,7 +56,7 @@
 @media (min-width:1120px){
     
     .product{
-        width: 20vw;
+        width: 15vw;
         background: #fff;
         box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
         border-radius: 1rem;
@@ -67,7 +67,7 @@
     }
     
     .product-img{
-        width: 20vw;
+        width: 15vw;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -7,9 +7,19 @@ const Body = () => {
 
     return (
         <div className='body'>
-            <ImageProm />
-            <Form />
-            <Carrusel />
+            {window.screen.width>1120?
+            <>
+                <div className='desktop'>
+                    <ImageProm />
+                    <Carrusel />
+                </div>
+                <Form />
+            </>:
+            <>
+                <ImageProm />
+                <Form />
+                <Carrusel />
+            </>}
         </div>
     );
 };

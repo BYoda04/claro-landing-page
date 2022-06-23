@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import { React, useState } from 'react';
 import PhoneContainer from './PhoneContainer';
 import phones from '../utils/phones';
 
 const Carrusel = () => {
 
     const [number,setNumber] = useState(0)
-    let translate3d = `translate3d(${-91*number}vw,0px,0px)`
 
     const add = ()=>{
         if (number<phones.length-1) {
             setNumber(number+1);
+        } else {
+            setNumber(0)
         }
     };
 
     const remove = ()=>{
         if (number>0) {
             setNumber(number-1);
+        } else {
+            setNumber(2)
         }
     };
-
-    console.log(number);
 
     return (
         <div className='carrusel-container'>
@@ -37,11 +38,23 @@ const Carrusel = () => {
             <div className='carrusel-phone-container'>
                 <div className='carrusel-phone'>
                     <ul id='carrusel'>
-                        {phones.map(phone=>(
-                            <li key={phone.id} style={{transform:translate3d}}>
-                                <PhoneContainer phone={phone}/>
+                        {window.screen.width>1120? 
+                        <>
+                            <li>
+                                <PhoneContainer phone={phones[number]}/>
                             </li>
-                        ))}
+                            <li>
+                                <PhoneContainer phone={number+1<=phones.length-1? phones[number+1] : phones[number-5]}/>
+                            </li>
+                            <li>
+                                <PhoneContainer phone={number+2<=phones.length-1? phones[number+2] : phones[number-4]}/>
+                            </li>
+                        </>:
+                        <>
+                            <li>
+                                <PhoneContainer phone={phones[number]}/>
+                            </li>
+                        </>}
                     </ul>
                 </div>
             </div>  

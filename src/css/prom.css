@@ -1,6 +1,5 @@
 .img{
-    width: 90vw;
-    padding: 1.15rem;
+    width: 99vw;
 }
 
 .img-container{
@@ -14,10 +13,7 @@
 @media (min-width:1120px){
 
     .img{
-        width: 40vw;
-        height: 50vh;
-        padding: 1.15rem;
-        margin: auto;
+        width: 99vw;
     }
     
     .img-container img{

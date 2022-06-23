@@ -47,26 +47,49 @@
     text-align: center;
 }
 
-.form-button button{
+.boton{
     background: #dc291c;
     border-radius: 1rem;
     padding: .8rem;
     color: #f8f8f8;
     text-transform: uppercase;
     font-weight: 700;
+    transition: all 1.5s ease 0s;
+}
+
+
+
+.boton.disabled{
+    background: #ff8077 !important;
+    transition: all 1.5s ease 0s;
+}
+
+.submit{
+    text-align: center;
+    color: #46b450;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 1.5s ease 0s;
+}
+
+.none{
+    transition: all 1.5s ease 0s;
+    display: none;
 }
 
 @media (min-width:1120px){
 
     .form{
+        top: 15rem;
+        right: 15rem;
         width: 20vw;
-        height: 45vh;
+        height: auto;
         background: #f8f8f8;
         box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-        margin: auto;
         padding: 1rem;
         border-radius: 1rem;
         text-align: start;
+        position: absolute;
     }
 
     .form form{
