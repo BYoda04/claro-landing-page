@@ -3,7 +3,7 @@
     background: #f8f8f8;
     box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
     margin: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 0;
     padding: 1rem;
     border-radius: 1rem;
     text-align: start;
@@ -80,8 +80,8 @@
 @media (min-width:1120px){
 
     .form{
-        top: 15rem;
-        right: 15rem;
+        top: 20rem;
+        right: 7rem;
         width: 20vw;
         height: auto;
         background: #f8f8f8;

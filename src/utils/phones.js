@@ -14,7 +14,7 @@ const phones = [
     {
         id: 2,
         img: fold3,
-        name: "Samsung Galaxy Z Fold 3 Negro 256GB 5G",
+        name: "Samsung Galaxy Z Fold 3",
         plan: "Max Ilimitado: 55.90",
         lastPrice: 1799,
         price: 1089
@@ -30,7 +30,7 @@ const phones = [
     {
         id: 4,
         img: fold3,
-        name: "Samsung Galaxy Z Fold 3 Negro 256GB 5G",
+        name: "Samsung Galaxy Z Fold 3",
         plan: "Max Ilimitado: 55.90",
         lastPrice: 1799,
         price: 1089

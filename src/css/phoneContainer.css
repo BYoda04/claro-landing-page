@@ -5,12 +5,12 @@
     border-radius: 1rem;
     padding: .8rem;
     display: grid;
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     gap: .5rem;
 }
 
 .product-img{
-    width: 70vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
