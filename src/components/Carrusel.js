@@ -1,26 +1,47 @@
-import { React, useState } from 'react';
-import PhoneContainer from './PhoneContainer';
+import { React, useEffect, useRef } from 'react';
 import phones from '../utils/phones';
+import PhoneContainer from './PhoneContainer';
 
 const Carrusel = () => {
 
-    const [number,setNumber] = useState(0)
+    const slideShow = useRef(null);
 
     const add = ()=>{
-        if (number<phones.length-1) {
-            setNumber(number+1);
-        } else {
-            setNumber(0)
+        if (slideShow.current.children.length>0) {
+            const firstElement = slideShow.current.children[0];
+            slideShow.current.style.transition = `1000ms ease-out all`;
+            slideShow.current.style.transform = `translateX(-98vw)`;
+            const endTransicion = ()=>{
+                slideShow.current.style.transition = `none`;
+                slideShow.current.style.transform = `translateX(0)`;
+                slideShow.current.appendChild(firstElement);
+                slideShow.current.removeEventListener('transitionend',endTransicion)
+            }
+            slideShow.current.addEventListener('transitionend',endTransicion)
         }
     };
 
     const remove = ()=>{
-        if (number>0) {
-            setNumber(number-1);
-        } else {
-            setNumber(2)
+        if (slideShow.current.children.length>0) {
+            const index = slideShow.current.children.length-1
+            const lastElement = slideShow.current.children[index];
+            slideShow.current.insertBefore(lastElement,slideShow.current.firstChild)
+            slideShow.current.style.transition = `none`;
+            slideShow.current.style.transform = `translateX(-98vw)`;
+            setTimeout(() => {
+                slideShow.current.style.transition = `1000ms ease-out all`;
+                slideShow.current.style.transform = `translateX(0)`;
+            }, 50);
         }
     };
+
+    useEffect(() => {
+        setInterval(() => {
+            add()
+        }, 3000);
+    }, [])
+    
+    
 
     return (
         <div className='carrusel-container'>
@@ -37,25 +58,11 @@ const Carrusel = () => {
             </div>
             <div className='carrusel-phone-container'>
                 <div className='carrusel-phone'>
-                    <ul id='carrusel'>
-                        {window.screen.width>1120? 
-                        <>
-                            <li>
-                                <PhoneContainer phone={phones[number]}/>
-                            </li>
-                            <li>
-                                <PhoneContainer phone={number+1<=phones.length-1? phones[number+1] : phones[number-5]}/>
-                            </li>
-                            <li>
-                                <PhoneContainer phone={number+2<=phones.length-1? phones[number+2] : phones[number-4]}/>
-                            </li>
-                        </>:
-                        <>
-                            <li>
-                                <PhoneContainer phone={phones[number]}/>
-                            </li>
-                        </>}
-                    </ul>
+                    <div className='carrusel-phone-div' ref={slideShow}>
+                        {phones.map(phone=>(
+                            <PhoneContainer phone={phone} key={phone.id}/>
+                        ))}
+                    </div>
                 </div>
             </div>  
         </div>

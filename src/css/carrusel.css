@@ -22,27 +22,28 @@
     overflow: hidden;
 }
 
-.carrusel-phone ul{
+.carrusel-phone-div{
     padding: 1rem;
-    padding-left: 2.5rem;
+    padding-left: 2.2rem;
     padding-right: 2rem;
     display: flex;
-    gap: 3rem;
-    overflow: hidden;
-    overflow-x: scroll;
+    gap: 5rem;
+    scroll-behavior: smooth;
 }
 
-.carrusel-phone ul::-webkit-scrollbar{
+.carrusel-phone-div::-webkit-scrollbar{
     width: 0;
 }
   
-.carrusel-phone ul::-webkit-scrollbar-thumb{
+.carrusel-phone-div::-webkit-scrollbar-thumb{
     width: 0;
 }
-
-.carrusel-phone li{
+/* 
+.carrusel-phone ul li{
+    gap: 5rem;
+    display: flex;
     transition: all 1.5s ease 0s;
-}
+} */
 
 .row-directions{
     width: 95vw;
@@ -65,8 +66,8 @@
 @media (min-width:1120px){
     
     .carrusel-container{
-        width: 65vw;
-        margin: auto;
+        width: 55vw;
+        margin-left: 5vw;
         margin-top: 0;
         padding-top: 2rem;
         top: 45vh;
