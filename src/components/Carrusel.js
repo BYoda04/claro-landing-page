@@ -10,7 +10,11 @@ const Carrusel = () => {
         if (slideShow.current.children.length>0) {
             const firstElement = slideShow.current.children[0];
             slideShow.current.style.transition = `1000ms ease-out all`;
-            slideShow.current.style.transform = `translateX(-98vw)`;
+            if (window.screen.width>1120) {
+                slideShow.current.style.transform = `translateX(-20vw)`;
+            } else {
+                slideShow.current.style.transform = `translateX(-98vw)`;
+            }
             const endTransicion = ()=>{
                 slideShow.current.style.transition = `none`;
                 slideShow.current.style.transform = `translateX(0)`;
@@ -27,7 +31,11 @@ const Carrusel = () => {
             const lastElement = slideShow.current.children[index];
             slideShow.current.insertBefore(lastElement,slideShow.current.firstChild)
             slideShow.current.style.transition = `none`;
-            slideShow.current.style.transform = `translateX(-98vw)`;
+            if (window.screen.width>1120) {
+                slideShow.current.style.transform = `translateX(-20vw)`;
+            } else {
+                slideShow.current.style.transform = `translateX(-98vw)`;
+            }
             setTimeout(() => {
                 slideShow.current.style.transition = `1000ms ease-out all`;
                 slideShow.current.style.transform = `translateX(0)`;
