@@ -6,7 +6,7 @@ const phones = [
     {
         id: 1,
         img: iphone13,
-        name: "Apple iPhone 13 128GB Midnight",
+        name: "Apple iPhone 13 128GB",
         plan: "Max Ilimitado: 55.90",
         lastPrice: 2799,
         price: 2089
@@ -38,7 +38,7 @@ const phones = [
     {
         id: 5,
         img: iphone13,
-        name: "Apple iPhone 13 128GB Midnight",
+        name: "Apple iPhone 13 128GB",
         plan: "Max Ilimitado: 55.90",
         lastPrice: 2799,
         price: 2089
